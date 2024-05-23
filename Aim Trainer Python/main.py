@@ -22,6 +22,39 @@ label_font = pygame.font.SysFont("comicsans", 24)
 
 
 class Target():
+    """
+    A class to represent a target in the Aim Trainer game.
+
+    ...
+
+    Attributes
+    ----------
+    x : int
+        x-coordinate of the target
+    y : int
+        y-coordinate of the target
+    size : float
+        current size of the target
+    grow : bool
+        indicates if the target is growing or shrinking
+    max_size : int
+        maximum size of the target
+    growth_rate : float
+        rate at which the target grows or shrinks
+    color_1 : str
+        primary color of the target
+    color_2 : str
+        secondary color of the target
+
+    Methods
+    -------
+    update():
+        Updates the size of the target.
+    draw(win):
+        Draws the target on the given window.
+    collide(x, y):
+        Checks if a point (x, y) collides with the target.
+    """
     max_size = 30
     growth_rate = 0.2
     color_1 = "red"
